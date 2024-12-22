@@ -2,4 +2,16 @@
 
 {% block title %}Chai Index page{% endblock %}
 
-{% block content %}<h1 class='bg-red-400 text-3xl'>This is Chai Index page content</h1>{% endblock %}
+{% block content %}<h1 class='bg-blue-400 text-3xl'>This is Chai Index page content</h1>
+
+<div class = 'grid grid-cols-3 gap-4'>
+{% for chai in chais %}
+    <div>
+        <img class='rounded' src="{{chai.image.url}}" alt="">
+        <h3>{{chai.name}}</h3>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
+    
